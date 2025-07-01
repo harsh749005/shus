@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inputfield/homepage.dart';
+import 'package:inputfield/scroll_items.dart';
 import 'package:inputfield/shop.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: Shop(),
+      home: ScrollItems(),
     );
   }
 }
