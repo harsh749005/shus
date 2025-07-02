@@ -4,9 +4,14 @@ import 'package:inputfield/pages/theme_home.dart';
 import 'package:inputfield/scroll_items.dart';
 import 'package:inputfield/shop.dart';
 import 'package:inputfield/theme/theme.dart';
+import 'package:inputfield/theme/theme_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+    create: (context) => ThemeProvider(),
+    child: const MyApp(),
+    ));
 }
 
 class MyApp extends StatelessWidget {
@@ -18,8 +23,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       home: const ThemeHome(),
-      theme: lightMode,
-      darkTheme: darkMode,
+      theme:Provider.of<ThemeProvider>(context).themeData,
     );
   }
 }
