@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inputfield/homepage.dart';
+import 'package:inputfield/models/counter_model.dart';
 import 'package:inputfield/pages/increment_page.dart';
 import 'package:inputfield/pages/theme_home.dart';
 import 'package:inputfield/scroll_items.dart';
@@ -10,7 +11,7 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
-    create: (context) => ThemeProvider(),
+    create: (context) => CounterModel(),
     child: const MyApp(),
     ));
 }
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       home: const IncrementPage(),
-      theme:Provider.of<ThemeProvider>(context).themeData,
+      // theme:Provider.of<ThemeProvider>(context).themeData,
     );
   }
 }
