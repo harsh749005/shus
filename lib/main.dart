@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inputfield/homepage.dart';
+import 'package:inputfield/pages/increment_page.dart';
 import 'package:inputfield/pages/theme_home.dart';
 import 'package:inputfield/scroll_items.dart';
 import 'package:inputfield/shop.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: const ThemeHome(),
+      home: const IncrementPage(),
       theme:Provider.of<ThemeProvider>(context).themeData,
     );
   }
